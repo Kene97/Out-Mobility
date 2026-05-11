@@ -39,6 +39,10 @@ export const metadata: Metadata = {
     "Get your ads in front of 100,000+ passengers daily across 6,000+ vehicles. Launch your first campaign in 3 minutes. No setup fees.",
   keywords:
     "in-car advertising, mobility advertising, verified impressions, Out Mobility, Out-door, ride-hail advertising",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "Out Mobility — Verified In-Car Advertising",
     description:

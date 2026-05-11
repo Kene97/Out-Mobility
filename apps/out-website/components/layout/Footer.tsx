@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between md:pt-8">
             {/* Social icons */}
             <div className="flex items-center gap-5 order-2 md:order-1">
-              <a href="#" aria-label="X / Twitter">
+              <a href="https://x.com/OutMobility" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter">
                 <img src={ASSETS.twitter} alt="X" className="w-5 h-5 opacity-80 hover:opacity-100 transition-opacity" />
               </a>
               <a href="#" aria-label="LinkedIn">
