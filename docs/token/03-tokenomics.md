@@ -8,7 +8,7 @@
 
 ## Total Supply
 
-**1,000,000,000 $OUT (1 billion tokens)**
+**1,000,000,000 $OUTSIDE (1 billion tokens)**
 
 This is a fixed supply. No additional tokens can be minted after the TGE.
 
@@ -101,7 +101,7 @@ for market-making and liquidity provision across decentralised and centralised
 exchanges at and after launch.
 
 This is not a team fund. It is not a development fund. Its sole purpose is to
-ensure $OUT can be traded with minimal slippage from day one.
+ensure $OUTSIDE can be traded with minimal slippage from day one.
 
 **Release:** Deployed at TGE and managed by the Out Mobility team and
 liquidity partners.
@@ -140,7 +140,7 @@ detail on eligibility, pricing, and process.
 
 ## Distribution Logic
 
-$OUT is designed to flow into circulation gradually, driven by real network
+$OUTSIDE is designed to flow into circulation gradually, driven by real network
 activity rather than arbitrary unlock schedules.
 
 The core principle: **tokens should enter circulation because something real

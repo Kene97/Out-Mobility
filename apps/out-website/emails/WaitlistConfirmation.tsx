@@ -104,7 +104,7 @@ export default function WaitlistConfirmation({ firstName }: WaitlistConfirmation
                 <Text style={ecosystemHeading}>One token. Every mile.</Text>
                 <Text style={ecosystemIntro}>
                   Out Mobility is bigger than advertising. We're building a
-                  full-stack mobility token — <strong>$OUT</strong> — that powers
+                  full-stack mobility token — <strong>$OUTSIDE</strong> — that powers
                   every layer of the ecosystem: the vehicles that move people, the
                   ads that fund them, the carbon they offset, and the grid they
                   charge from.
@@ -133,7 +133,7 @@ export default function WaitlistConfirmation({ firstName }: WaitlistConfirmation
             <Row>
               <Column style={{ padding: "4px 40px 32px" }}>
                 <Text style={ecosystemClosure}>
-                  $OUT is the token that ties it all together — every ride earned,
+                  $OUTSIDE is the token that ties it all together — every ride earned,
                   every ad verified, every carbon credit issued, every charge
                   delivered. The network grows. The token captures it.
                 </Text>

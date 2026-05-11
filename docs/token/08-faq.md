@@ -6,23 +6,23 @@ Simple questions. Simple answers.
 
 ## General
 
-**What is $OUT?**
+**What is $OUTSIDE?**
 
-$OUT is the utility token of the Out Mobility ecosystem. It is used for
+$OUTSIDE is the utility token of the Out Mobility ecosystem. It is used for
 advertising payments, driver and operator rewards, staking, and cross-product
 settlement across Out-door, Out-side, Out-leaf, and Out-charge.
 
 ---
 
-**Is $OUT live?**
+**Is $OUTSIDE live?**
 
-No. $OUT has not launched yet. There are no tokens in circulation, no exchange
+No. $OUTSIDE has not launched yet. There are no tokens in circulation, no exchange
 listings, and no active trading. Anyone claiming otherwise is not associated
 with Out Mobility.
 
 ---
 
-**When does $OUT launch?**
+**When does $OUTSIDE launch?**
 
 We do not have a confirmed launch date yet. The token will launch after the
 Out-door network has achieved meaningful real-world activity. We will announce
@@ -30,9 +30,9 @@ the TGE date to the community before it happens. Follow @OutMobility for updates
 
 ---
 
-**How do I get $OUT?**
+**How do I get $OUTSIDE?**
 
-Right now, you cannot buy $OUT — it does not exist yet. When we launch, the
+Right now, you cannot buy $OUTSIDE — it does not exist yet. When we launch, the
 first opportunity will go to the waitlist community. Sign up at the Out Mobility
 website to get early access.
 
@@ -40,7 +40,7 @@ website to get early access.
 
 **Is this a meme coin?**
 
-No. $OUT is a utility token designed for a real network. It has no meme theme,
+No. $OUTSIDE is a utility token designed for a real network. It has no meme theme,
 no animal mascot, and no viral gimmick. It is backed by a company building
 physical infrastructure — vehicles, screens, chargers, and verified data.
 
@@ -48,7 +48,7 @@ physical infrastructure — vehicles, screens, chargers, and verified data.
 
 **Is this a DeFi project?**
 
-Not primarily. $OUT is a DePIN token — Decentralised Physical Infrastructure
+Not primarily. $OUTSIDE is a DePIN token — Decentralised Physical Infrastructure
 Network. The token is the economic layer of a real-world vehicle network,
 not a yield farming or lending protocol.
 
@@ -58,7 +58,7 @@ not a yield farming or lending protocol.
 
 **What is the total supply?**
 
-1,000,000,000 $OUT (1 billion tokens). This is a fixed supply. No new tokens
+1,000,000,000 $OUTSIDE (1 billion tokens). This is a fixed supply. No new tokens
 can ever be created.
 
 ---
@@ -89,7 +89,7 @@ can be created.
 
 **Is there a burn mechanism?**
 
-A transaction-based burn mechanism is planned. A small percentage of $OUT
+A transaction-based burn mechanism is planned. A small percentage of $OUTSIDE
 used in platform transactions will be permanently burned over time. The exact
 burn rate will be confirmed before the TGE.
 
@@ -134,7 +134,7 @@ through the Out Mobility network.
 DePIN stands for Decentralised Physical Infrastructure Network. It refers to
 real-world infrastructure — vehicles, sensors, chargers, screens — that is
 economically powered by a token network. Out Mobility is a DePIN company.
-$OUT is its DePIN token.
+$OUTSIDE is its DePIN token.
 
 ---
 
@@ -172,7 +172,7 @@ official Out Mobility channels only.
 
 ---
 
-**What if I see $OUT listed on an exchange before the official announcement?**
+**What if I see $OUTSIDE listed on an exchange before the official announcement?**
 
 Do not buy it. It is not affiliated with Out Mobility. We will only ever
 announce listings through the official website and @OutMobility on X.

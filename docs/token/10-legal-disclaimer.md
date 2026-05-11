@@ -3,7 +3,7 @@
 ## What This Documentation Is
 
 This documentation describes the current design intent, thinking, and plans
-of Out Mobility regarding the $OUT token and the Out Mobility ecosystem.
+of Out Mobility regarding the $OUTSIDE token and the Out Mobility ecosystem.
 
 It is published for informational and educational purposes only.
 
@@ -31,7 +31,7 @@ a licensed financial adviser who understands your personal circumstances.
 Out Mobility makes no representation, warranty, or guarantee — expressed or
 implied — that:
 
-- $OUT will maintain or increase in value
+- $OUTSIDE will maintain or increase in value
 - Any token distribution event will be profitable
 - The Out Mobility network will achieve any particular level of scale or revenue
 - Any projected milestones, timelines, or product features will be delivered
@@ -61,8 +61,8 @@ This documentation does not constitute an offer to sell, a solicitation of
 an offer to buy, or a recommendation of any security, investment, or financial
 instrument.
 
-$OUT has not been registered as a security in any jurisdiction. Out Mobility
-has not made any filing or application regarding $OUT with any financial
+$OUTSIDE has not been registered as a security in any jurisdiction. Out Mobility
+has not made any filing or application regarding $OUTSIDE with any financial
 regulatory authority.
 
 Participation in any future token distribution event may be restricted in

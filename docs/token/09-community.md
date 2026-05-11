@@ -7,13 +7,13 @@ Out Mobility communicates with the community in one primary place:
 **X (formerly Twitter): [@OutMobility](https://x.com/OutMobility)**
 
 This is the official source of truth for:
-- $OUT token updates and announcements
+- $OUTSIDE token updates and announcements
 - TGE date and launch details
 - Ecosystem milestones and product news
 - Partner and operator announcements
 - Community events and initiatives
 
-If you want to know what is happening with Out Mobility and $OUT,
+If you want to know what is happening with Out Mobility and $OUTSIDE,
 follow @OutMobility.
 
 ---

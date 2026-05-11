@@ -2,7 +2,7 @@
 
 ## Current Status
 
-**$OUT has not launched.**
+**$OUTSIDE has not launched.**
 
 There is no token in circulation. There is no exchange listing. There is no
 trading pair. Anyone claiming otherwise is not affiliated with Out Mobility.
@@ -14,7 +14,7 @@ what the launch plan looks like, and what to expect — and when.
 
 ## Why Not Launched Yet?
 
-$OUT will launch when Out Mobility is ready — not before.
+$OUTSIDE will launch when Out Mobility is ready — not before.
 
 A token launch before the network has real activity is a speculation event,
 not an ecosystem event. We are not building a speculation token. We are building
@@ -26,7 +26,7 @@ The sequence is:
 1. Build and launch Out-door (in-car advertising) — **Active**
 2. Grow a real advertiser and operator base — **In progress**
 3. Establish verified network activity and revenue — **Upcoming**
-4. Launch $OUT into a network that already has real demand — **Planned**
+4. Launch $OUTSIDE into a network that already has real demand — **Planned**
 
 This is the responsible path. It is also the path most likely to produce a
 token that holds value over time.
@@ -61,25 +61,25 @@ token that holds value over time.
 
 **No exchange listings currently exist.**
 
-Out Mobility has not listed $OUT on any exchange — decentralised or centralised.
+Out Mobility has not listed $OUTSIDE on any exchange — decentralised or centralised.
 
 When listings occur, they will be announced officially through:
 - The Out Mobility website (out-mobility.vercel.app)
 - The official X account (@OutMobility)
 - Direct communication to waitlist members
 
-Do not trust any other source claiming $OUT is listed or available for purchase.
-If you find a token claiming to be $OUT on any exchange before an official
+Do not trust any other source claiming $OUTSIDE is listed or available for purchase.
+If you find a token claiming to be $OUTSIDE on any exchange before an official
 announcement, it is not affiliated with Out Mobility.
 
 ---
 
 ## Liquidity Design
 
-10% of total supply (100,000,000 $OUT) is reserved specifically for liquidity
+10% of total supply (100,000,000 $OUTSIDE) is reserved specifically for liquidity
 provision. This allocation exists to ensure:
 
-- Traders can buy and sell $OUT without excessive price impact
+- Traders can buy and sell $OUTSIDE without excessive price impact
 - The market has depth from day one
 - Liquidity is not entirely dependent on retail participation
 

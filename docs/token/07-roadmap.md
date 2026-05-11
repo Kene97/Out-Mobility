@@ -2,7 +2,7 @@
 
 ## From Infrastructure to Ecosystem
 
-The $OUT token roadmap is intentionally tied to the Out Mobility product
+The $OUTSIDE token roadmap is intentionally tied to the Out Mobility product
 roadmap — not to arbitrary crypto market timing.
 
 Tokens launch when networks are ready. Networks are ready when they have
@@ -27,7 +27,7 @@ before the token can exist meaningfully.
 - Deploy Out-door across an initial vehicle fleet
 - Establish a verified advertiser and operator base
 - Build and launch the Out Mobility website and waitlist
-- Publish $OUT token documentation (this document)
+- Publish $OUTSIDE token documentation (this document)
 - Begin smart contract development and security planning
 - Grow the waitlist community
 
@@ -61,17 +61,17 @@ Smart contract audited. Tokenomics locked. Community ready. Launch date set.
 
 **Status: Planned**
 
-The $OUT token launches. Supply enters circulation for the first time.
+The $OUTSIDE token launches. Supply enters circulation for the first time.
 
 **Objectives:**
 - Execute public distribution event (fair launch, sale, or hybrid — TBD)
 - Deploy liquidity on a decentralised exchange
 - Launch community & rewards programme
-- Begin driver and operator $OUT reward payouts
+- Begin driver and operator $OUTSIDE reward payouts
 - Publish token holder dashboard and explorer links
 
 **Milestone to exit this phase:**
-$OUT trading live on at least one DEX. Reward programme active.
+$OUTSIDE trading live on at least one DEX. Reward programme active.
 Community distribution complete.
 
 ---
@@ -84,14 +84,14 @@ With the token live, the focus shifts to deepening its integration across
 the Out Mobility product stack.
 
 **Objectives:**
-- Enable $OUT-denominated advertising payments on Out-door
-- Launch Out-side (ride-hailing) with $OUT rider and driver rewards
-- Begin Out-leaf pilot: first carbon credits issued and denominated in $OUT
-- Activate $OUT staking for advertisers
+- Enable $OUTSIDE-denominated advertising payments on Out-door
+- Launch Out-side (ride-hailing) with $OUTSIDE rider and driver rewards
+- Begin Out-leaf pilot: first carbon credits issued and denominated in $OUTSIDE
+- Activate $OUTSIDE staking for advertisers
 - Pursue CEX listings on selected exchanges
 
 **Milestone to exit this phase:**
-All four products have active $OUT integration.
+All four products have active $OUTSIDE integration.
 Circulating supply actively being earned and spent across the network.
 
 ---
@@ -104,9 +104,9 @@ The network is running. The token is being used. This phase is about deepening
 the token's role and building the governance layer.
 
 **Objectives:**
-- Launch $OUT governance framework — token holders can vote on ecosystem proposals
-- Deploy Out-charge: charging sessions settled in $OUT
-- Open data marketplace pilot: verified mobility data accessible via $OUT
+- Launch $OUTSIDE governance framework — token holders can vote on ecosystem proposals
+- Deploy Out-charge: charging sessions settled in $OUTSIDE
+- Open data marketplace pilot: verified mobility data accessible via $OUTSIDE
 - Expand DePIN network to new markets and geographies
 - Deepen liquidity across multiple exchange venues
 
@@ -116,13 +116,13 @@ the token's role and building the governance layer.
 
 **Status: Long-term vision**
 
-The future state of $OUT as the native token of a scaled global DePIN network.
+The future state of $OUTSIDE as the native token of a scaled global DePIN network.
 
 **Vision objectives:**
-- $OUT accepted across a fleet of 100,000+ vehicles in multiple markets
+- $OUTSIDE accepted across a fleet of 100,000+ vehicles in multiple markets
 - Carbon credit infrastructure operating at scale through Out-leaf
 - EV charging network covering major fleet operator hubs
-- Data marketplace generating consistent $OUT transaction volume
+- Data marketplace generating consistent $OUTSIDE transaction volume
 - Community governance actively shaping ecosystem decisions
 - Cross-chain integrations for broader accessibility
 
