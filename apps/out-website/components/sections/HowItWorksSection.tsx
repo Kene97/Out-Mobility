@@ -44,22 +44,10 @@ export default function HowItWorksSection() {
       <div className="max-w-[1440px] mx-auto">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-8">
 
-          {/* ── Left: image + heading ── */}
+          {/* ── Left: heading + image ── */}
           <div className="flex flex-col gap-6 lg:w-[602px] lg:flex-shrink-0 lg:justify-center">
-            {/* heading: mobile shows above image on mobile, after image on desktop */}
             <motion.h2
-              className="text-[24px] lg:text-[36px] text-[#003a50] tracking-[-0.02em] leading-[1.3] lg:hidden"
-              style={{ fontFamily: "'Cal Sans', sans-serif" }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            >
-              Get visible in over 6,000 moving vehicles in 3 minutes.
-            </motion.h2>
-
-            <motion.h2
-              className="hidden lg:block text-[36px] text-[#003a50] tracking-[-0.02em] leading-[1.22]"
-              style={{ fontFamily: "'Cal Sans', sans-serif" }}
+              className="font-heading text-[24px] lg:text-[36px] text-[#003a50] tracking-[-0.02em] leading-[1.3]"
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
@@ -85,14 +73,12 @@ export default function HowItWorksSection() {
 
           {/* ── Right: steps + CTA ── */}
           <div className="flex flex-col gap-3 lg:flex-1 lg:justify-between lg:min-h-[601px]">
-            {/* Steps */}
             <div className="flex flex-col gap-1.5 lg:gap-2">
               {steps.map((s, i) => (
                 <StepCard key={s.n} step={s} index={i} inView={inView} />
               ))}
             </div>
 
-            {/* CTA card */}
             <motion.div
               className="bg-white rounded-xl lg:rounded-3xl p-4 lg:p-8"
               initial={{ opacity: 0, y: 16 }}
@@ -100,10 +86,7 @@ export default function HowItWorksSection() {
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.42 }}
             >
               <div className="flex items-center justify-between gap-4">
-                <p
-                  className="text-[18px] lg:text-[24px] text-[#003a50] leading-[1.33]"
-                  style={{ fontFamily: "'Cal Sans', sans-serif" }}
-                >
+                <p className="font-heading text-[18px] lg:text-[24px] text-[#003a50] leading-[1.33]">
                   Launch a campaign in 3 minutes
                 </p>
                 <CTAButton size="sm" className="flex-shrink-0 text-[14px] lg:text-[20px] px-5 lg:px-12 py-4 lg:py-6">
@@ -142,7 +125,7 @@ function StepCard({ step, index, inView }: StepCardProps) {
         style={{
           right: "100px",
           transform: "translateX(100%)",
-          fontFamily: "var(--font-barlow-condensed), 'Arial Narrow', Arial, sans-serif",
+          fontFamily: "var(--font-mona-sans), 'Arial Narrow', Arial, sans-serif",
           fontWeight: 200,
         }}
         aria-hidden="true"
@@ -151,12 +134,9 @@ function StepCard({ step, index, inView }: StepCardProps) {
       </span>
 
       <div className="relative flex items-start gap-4">
-        {/* Step badge — desktop only */}
         <span className="hidden lg:inline-flex items-center justify-center bg-[#f6fcff] text-[#003a50] text-[13px] font-normal px-4 py-2 rounded-full flex-shrink-0 whitespace-nowrap h-9">
           {step.step}
         </span>
-
-        {/* Content */}
         <div className="flex flex-col gap-1 flex-1">
           <p className="text-[14px] font-semibold text-[#003a50] leading-[1.43]">
             {step.title}

@@ -22,12 +22,7 @@ export default function HeroSection() {
         <div className="flex flex-col gap-4 lg:w-[485px] lg:flex-shrink-0">
 
           {/* Headline */}
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            custom={0}
-          >
+          <motion.div variants={fadeUp} initial="hidden" animate="show" custom={0}>
             <h1 className="font-display font-black uppercase leading-none text-[#003a50]">
               <span className="block text-[48px] md:text-[64px] lg:text-[72px] leading-[0.92]">
                 GET VISIBLE IN 6,000+ VEHICLES
@@ -47,10 +42,7 @@ export default function HeroSection() {
             custom={0.1}
             className="flex flex-col gap-1"
           >
-            <p
-              className="text-[16px] md:text-[20px] font-semibold text-[#00aeef] leading-[1.5]"
-              style={{ fontFamily: "'Cal Sans', sans-serif" }}
-            >
+            <p className="font-heading text-[16px] md:text-[20px] font-semibold text-[#00aeef] leading-[1.5]">
               Connect your ads to passengers in 3 minutes.
             </p>
             <p className="text-[14px] md:text-[16px] font-normal text-[#003a50] leading-[1.6]">

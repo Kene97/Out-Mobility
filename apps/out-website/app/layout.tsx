@@ -1,20 +1,36 @@
 import type { Metadata } from "next";
-import { Instrument_Sans, Barlow_Condensed } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const instrumentSans = Instrument_Sans({
-  subsets: ["latin"],
-  variable: "--font-instrument-sans",
+// Mona Sans — the real brand display font (narrow weights used in the Figma)
+const monaSans = localFont({
+  src: [
+    { path: "../public/fonts/Mona-Sans-UltraLightNarrow.ttf", weight: "200", style: "normal" },
+    { path: "../public/fonts/Mona-Sans-MediumNarrow.ttf",     weight: "500", style: "normal" },
+    { path: "../public/fonts/Mona-Sans-BoldNarrow.ttf",       weight: "700", style: "normal" },
+    { path: "../public/fonts/Mona-Sans-BlackNarrow.ttf",      weight: "900", style: "normal" },
+  ],
+  variable: "--font-mona-sans",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
 });
 
-const barlowCondensed = Barlow_Condensed({
-  subsets: ["latin"],
-  variable: "--font-barlow-condensed",
+// Cal Sans — brand heading font
+const calSans = localFont({
+  src: [{ path: "../public/fonts/CalSans-Regular.ttf", weight: "400", style: "normal" }],
+  variable: "--font-cal-sans",
   display: "swap",
-  weight: ["700", "800", "900"],
-  style: ["normal"],
+});
+
+// Instrument Sans — body / UI font
+const instrumentSans = localFont({
+  src: [
+    { path: "../public/fonts/InstrumentSans-Regular.ttf", weight: "400", style: "normal" },
+    { path: "../public/fonts/InstrumentSans-Medium.ttf",  weight: "500", style: "normal" },
+    { path: "../public/fonts/InstrumentSans-SemiBold.ttf",weight: "600", style: "normal" },
+    { path: "../public/fonts/InstrumentSans-Bold.ttf",    weight: "700", style: "normal" },
+  ],
+  variable: "--font-instrument-sans",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -45,16 +61,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${instrumentSans.variable} ${barlowCondensed.variable}`}
+      className={`${monaSans.variable} ${calSans.variable} ${instrumentSans.variable}`}
     >
-      <head>
-        {/* Cal Sans from Fontshare CDN */}
-        <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="anonymous" />
-        <link
-          href="https://api.fontshare.com/v2/css?f[]=cal-sans@1&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body className="antialiased">{children}</body>
     </html>
   );

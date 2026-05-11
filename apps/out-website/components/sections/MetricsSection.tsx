@@ -42,10 +42,7 @@ export default function MetricsSection() {
                 animate={inView ? "show" : "hidden"}
                 className="bg-[#f6fcff] border border-[#cceffc] lg:border-0 rounded-xl lg:rounded-2xl p-4 lg:p-8 flex flex-col justify-center gap-1 h-[86px] lg:h-[104px]"
               >
-                <p
-                  className="text-[20px] lg:text-[24px] font-normal text-[#00aeef] leading-[1.3]"
-                  style={{ fontFamily: "'Cal Sans', sans-serif" }}
-                >
+                <p className="font-heading text-[20px] lg:text-[24px] font-normal text-[#00aeef] leading-[1.3]">
                   {m.value}
                 </p>
                 <p className="text-[12px] lg:text-[16px] font-semibold text-[#003a50] leading-tight">
@@ -63,10 +60,7 @@ export default function MetricsSection() {
             animate={inView ? "show" : "hidden"}
           >
             <div className="flex flex-col gap-2">
-              <h2
-                className="text-[24px] lg:text-[36px] text-[#003a50] tracking-[-0.02em] leading-[1.22]"
-                style={{ fontFamily: "'Cal Sans', sans-serif" }}
-              >
+              <h2 className="font-heading text-[24px] lg:text-[36px] text-[#003a50] tracking-[-0.02em] leading-[1.22]">
                 Real utilities begin with{" "}
                 <span className="text-[#00aeef]">Innovation.</span>
               </h2>
