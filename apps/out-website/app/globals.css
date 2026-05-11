@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Brand colors (from Figma) ── */
+  --color-brand-navy: #003a50;
+  --color-brand-sky: #00aeef;
+  --color-brand-sky-25: #f6fcff;
+  --color-brand-sky-50: #cceffc;
+  --color-brand-teal: #004762;
+  --color-gray-50: #f9fafb;
+  --color-base-white: #ffffff;
+  --color-base-black: #000000;
+
+  /* ── Fonts ── */
+  /* Display (Mona Sans replacement) — Barlow Condensed loaded via next/font/google */
+  --font-display: var(--font-barlow-condensed), "Arial Narrow", Arial, sans-serif;
+  /* Heading — Cal Sans loaded via Fontshare CDN */
+  --font-heading: "Cal Sans", "DM Sans", system-ui, sans-serif;
+  /* Body — Instrument Sans loaded via next/font/google */
+  --font-body: var(--font-instrument-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* ── Spacing tokens ── */
+  --spacing-xxs: 4px;
+  --spacing-s: 8px;
+  --spacing-sm: 12px;
+  --spacing-m: 16px;
+  --spacing-ml: 24px;
+  --spacing-l: 32px;
+  --spacing-xl: 48px;
+  --spacing-3xl: 64px;
+  --spacing-5xl: 80px;
+
+  /* ── Border radius ── */
+  --radius-btn: 16px;
+  --radius-card: 16px;
+  --radius-card-lg: 40px;
+  --radius-logo: 8px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-brand-navy);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Marquee animation for ticker */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}

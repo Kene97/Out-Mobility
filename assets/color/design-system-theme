@@ -1,0 +1,14 @@
+{
+  "theme": {
+    "background": "#FFFFFF",
+    "surface": "#E7E7E7",
+    "text": "#000000",
+    "primary": "#00AEEF",
+    "secondary": "#7AEE41",
+    "accent": "#7C30FF",
+    "success": "#34C759",
+    "warning": "#E8B931",
+    "danger": "#FF383C",
+    "dark": "#00364B"
+  }
+}

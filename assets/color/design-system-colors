@@ -1,0 +1,26 @@
+{
+  "colors": {
+    "white": "#FFFFFF",
+    "softBlueTint": "#F6FCFF",
+    "softLavenderTint": "#F9F6FF",
+    "softMintTint": "F9FFF6",
+
+    "skyBlue": "#00AEEF",
+    "limeGreen": "#7AEE41",
+    "violet": "#7C30FF",
+    "lightGray": "#E7E7E7",
+    "warningYellow": "#E8B931",
+
+    "deepTeal": "#004762",
+    "oliveGreen": "#396E1E",
+    "deepPurple": "#321367",
+    "neutralGray": "#5A5A5A",
+    "successGreen": "#34C759",
+
+    "deepNavy": "#00364B",
+    "darkOlive": "#284818",
+    "midnightPurple": "#1E0D3E",
+    "black": "#000000",
+    "dangerRed": "#FF383C"
+  }
+}
