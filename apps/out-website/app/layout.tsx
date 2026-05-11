@@ -34,26 +34,37 @@ const instrumentSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Out Mobility — Verified In-Car Advertising",
+  metadataBase: new URL("https://out-mobility.vercel.app"),
+  title: "Out Mobility — Your Brand in 6,000+ Moving Vehicles",
   description:
-    "Get your ads in front of 100,000+ passengers daily across 6,000+ vehicles. Launch your first campaign in 3 minutes. No setup fees.",
+    "Run verified in-car ads across 6,000+ ride-hail vehicles and reach 100,000+ daily passengers. Real-time impression tracking. Campaigns live in 3 minutes. No setup fees, no middleman.",
   keywords:
-    "in-car advertising, mobility advertising, verified impressions, Out Mobility, Out-door, ride-hail advertising",
+    "in-car advertising, mobility advertising, verified impressions, Out Mobility, Out-door, ride-hail advertising, fleet advertising, programmatic OOH",
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "Out Mobility — Verified In-Car Advertising",
+    title: "Out Mobility — Your Brand in 6,000+ Moving Vehicles",
     description:
-      "Get visible in 6,000+ vehicles in 3 minutes. Every impression verified.",
+      "Verified in-car advertising infrastructure. 100,000+ daily passengers, real-time impression tracking, campaigns live in 3 minutes.",
     type: "website",
     siteName: "Out Mobility",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 3600,
+        height: 1890,
+        alt: "Out Mobility — Verified In-Car Advertising Platform",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Out Mobility — Verified In-Car Advertising",
-    description: "Get visible in 6,000+ vehicles in 3 minutes.",
+    title: "Out Mobility — Your Brand in 6,000+ Moving Vehicles",
+    description:
+      "Verified in-car advertising. 100,000+ daily passengers, real-time impression tracking, campaigns live in 3 minutes.",
+    images: ["/og-image.png"],
   },
 };
 
