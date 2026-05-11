@@ -2,11 +2,13 @@
 
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { useWaitlist } from "@/context/WaitlistContext";
 
 interface CTAButtonProps {
   children: React.ReactNode;
   className?: string;
   href?: string;
+  onClick?: () => void;
   size?: "default" | "sm";
   fullWidth?: boolean;
 }
@@ -15,9 +17,11 @@ export default function CTAButton({
   children,
   className,
   href,
+  onClick,
   size = "default",
   fullWidth = false,
 }: CTAButtonProps) {
+  const { openWaitlist } = useWaitlist();
   const base = cn(
     "relative inline-flex items-center justify-center overflow-hidden",
     "bg-[#00aeef] text-white rounded-2xl",
@@ -45,7 +49,11 @@ export default function CTAButton({
   }
 
   return (
-    <motion.button className={base} {...motionProps}>
+    <motion.button
+      className={base}
+      onClick={onClick ?? openWaitlist}
+      {...motionProps}
+    >
       {children}
     </motion.button>
   );

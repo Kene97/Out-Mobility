@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { WaitlistProvider } from "@/context/WaitlistContext";
+import WaitlistModal from "@/components/ui/WaitlistModal";
 
 // Mona Sans — the real brand display font (narrow weights used in the Figma)
 const monaSans = localFont({
@@ -78,7 +80,12 @@ export default function RootLayout({
       lang="en"
       className={`${monaSans.variable} ${calSans.variable} ${instrumentSans.variable}`}
     >
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <WaitlistProvider>
+          {children}
+          <WaitlistModal />
+        </WaitlistProvider>
+      </body>
     </html>
   );
 }
