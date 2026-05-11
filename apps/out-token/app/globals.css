@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Brand palette ── */
+  --color-navy:       #003a50;
+  --color-navy-deep:  #060e14;
+  --color-navy-mid:   #0a1822;
+  --color-navy-card:  #0d2030;
+  --color-teal:       #004762;
+  --color-teal-mid:   #00364b;
+  --color-sky:        #00aeef;
+  --color-sky-dim:    #0099d4;
+  --color-sky-glow:   rgba(0,174,239,0.18);
+  --color-white:      #ffffff;
+
+  /* ── Fonts ── */
+  --font-display:  var(--font-mona-sans), "Arial Narrow", Arial, sans-serif;
+  --font-heading:  var(--font-cal-sans), system-ui, sans-serif;
+  --font-body:     var(--font-instrument-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* ── Spacing ── */
+  --spacing-section: 96px;
+
+  /* ── Radius ── */
+  --radius-card:  16px;
+  --radius-pill:  9999px;
+  --radius-nav:   16px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background-color: #060e14;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Grid pattern overlay */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0,174,239,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,174,239,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Radial glow */
+.glow-sky {
+  background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(0,174,239,0.14) 0%, transparent 70%);
+}
+
+/* Token ticker marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 32s linear infinite; }
+.animate-marquee:hover { animation-play-state: paused; }
+
+/* Slow spin for token emblem */
+@keyframes slow-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.animate-slow-spin { animation: slow-spin 18s linear infinite; }
+
+/* Pulse glow */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 32px rgba(0,174,239,0.25), 0 0 64px rgba(0,174,239,0.10); }
+  50%       { box-shadow: 0 0 48px rgba(0,174,239,0.45), 0 0 96px rgba(0,174,239,0.20); }
+}
+.animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
+
+/* Fade up for scroll reveals */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
