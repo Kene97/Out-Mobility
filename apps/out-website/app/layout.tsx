@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 import { WaitlistProvider } from "@/context/WaitlistContext";
 import WaitlistModal from "@/components/ui/WaitlistModal";
@@ -36,7 +37,8 @@ const instrumentSans = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://out-mobility.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://woutside.com"),
+  alternates: { canonical: "/" },
   title: "Out Mobility — Your Brand in 6,000+ Moving Vehicles",
   description:
     "Run verified in-car ads across 6,000+ ride-hail vehicles and reach 100,000+ daily passengers. Real-time impression tracking. Campaigns live in 3 minutes. No setup fees, no middleman.",
@@ -70,6 +72,23 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Out Mobility",
+  url: "https://woutside.com",
+  logo: "https://woutside.com/favicon.png",
+  description:
+    "Out Mobility builds verified in-car advertising infrastructure — connecting brands to 100,000+ daily passengers across 6,000+ ride-hail and fleet vehicles.",
+  foundingDate: "2024",
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "hello@woutside.com",
+    contactType: "sales",
+  },
+  sameAs: [],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -80,11 +99,24 @@ export default function RootLayout({
       lang="en"
       className={`${monaSans.variable} ${calSans.variable} ${instrumentSans.variable}`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="antialiased">
         <WaitlistProvider>
           {children}
           <WaitlistModal />
         </WaitlistProvider>
+        <Script
+          id="microsoft-clarity"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wpukuhj3uk");`,
+          }}
+        />
       </body>
     </html>
   );

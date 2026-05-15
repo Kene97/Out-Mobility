@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import CTAButton from "@/components/ui/CTAButton";
 import { ASSETS } from "@/lib/assets";
@@ -35,6 +35,9 @@ const steps = [
 export default function HowItWorksSection() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
+  const imgRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: imgRef, offset: ["start end", "end start"] });
+  const imgY = useTransform(scrollYProgress, [0, 1], ["4%", "-4%"]);
 
   return (
     <section
@@ -55,18 +58,19 @@ export default function HowItWorksSection() {
               Get visible in over 6,000 moving vehicles in 3 minutes.
             </motion.h2>
 
-            {/* Dashboard image */}
+            {/* Dashboard image — with parallax */}
             <motion.div
+              ref={imgRef}
               className="w-full lg:w-[602px] h-[236px] lg:h-[493px] rounded-xl lg:rounded-[40px] overflow-hidden bg-[#f9fafb] relative"
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={inView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+              initial={{ opacity: 0, scale: 0.96, y: 20 }}
+              animate={inView ? { opacity: 1, scale: 1, y: 0 } : {}}
+              transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
             >
-              <img
+              <motion.img
                 src={ASSETS.dashboard}
-                alt="Out-door advertiser dashboard showing campaign analytics"
-                className="absolute w-full object-cover"
-                style={{ top: "-9.19%", height: "118.38%", left: "0.01%", width: "99.99%" }}
+                alt="Passengers in a vehicle viewing the Out-door in-car screen"
+                className="absolute inset-0 w-full h-full object-cover object-center"
+                style={{ y: imgY, scale: 1.08 }}
               />
             </motion.div>
           </div>
@@ -111,13 +115,14 @@ function StepCard({ step, index, inView }: StepCardProps) {
   return (
     <motion.div
       className="relative bg-white rounded-xl lg:rounded-2xl px-6 py-4 overflow-hidden"
-      initial={{ opacity: 0, x: 20 }}
-      animate={inView ? { opacity: 1, x: 0 } : {}}
+      initial={{ opacity: 0, x: 32, y: 8 }}
+      animate={inView ? { opacity: 1, x: 0, y: 0 } : {}}
       transition={{
-        duration: 0.45,
+        duration: 0.5,
         ease: [0.22, 1, 0.36, 1],
-        delay: 0.1 + index * 0.07,
+        delay: 0.12 + index * 0.09,
       }}
+      whileHover={{ x: 4, transition: { duration: 0.2 } }}
     >
       {/* Step number watermark — partially clipped at right edge */}
       <span
@@ -138,9 +143,9 @@ function StepCard({ step, index, inView }: StepCardProps) {
           {step.step}
         </span>
         <div className="flex flex-col gap-1 flex-1">
-          <p className="text-[14px] font-semibold text-[#003a50] leading-[1.43]">
+          <h3 className="text-[14px] font-semibold text-[#003a50] leading-[1.43]">
             {step.title}
-          </p>
+          </h3>
           <p className="text-[12px] lg:text-[14px] font-normal text-[#003a50] leading-[1.57]">
             {step.desc}
           </p>

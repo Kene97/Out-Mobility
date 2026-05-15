@@ -22,20 +22,25 @@ export default function ValuePropSection() {
           {/* Background grid pattern */}
           <GridPattern />
 
-          <motion.p
+          <h2
             className="relative z-10 font-display font-black uppercase text-white"
             style={{ lineHeight: 1.14 }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}
           >
-            <span className="block text-[32px] md:text-[52px] lg:text-[72px]">
-              We make in-vehicle advertising
-            </span>
-            <span className="block text-[36px] md:text-[56px] lg:text-[72px]">
-              QUICK, reliable, measurable, and scalable.
-            </span>
-          </motion.p>
+            {[
+              { text: "We make in-vehicle advertising", size: "text-[32px] md:text-[52px] lg:text-[72px]", delay: 0.12 },
+              { text: "QUICK, reliable, measurable, and scalable.", size: "text-[36px] md:text-[56px] lg:text-[72px]", delay: 0.22 },
+            ].map((line) => (
+              <motion.span
+                key={line.text}
+                className={`block ${line.size}`}
+                initial={{ opacity: 0, y: 28, filter: "blur(6px)" }}
+                animate={inView ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
+                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: line.delay }}
+              >
+                {line.text}
+              </motion.span>
+            ))}
+          </h2>
         </motion.div>
       </div>
     </section>

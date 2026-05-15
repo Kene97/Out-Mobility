@@ -1,4 +1,3 @@
-import { ASSETS } from "@/lib/assets";
 import { cn } from "@/lib/utils";
 
 interface OutLogoProps {
@@ -10,19 +9,21 @@ export default function OutLogo({ size = 44, className }: OutLogoProps) {
   return (
     <div
       className={cn(
-        "bg-[#00aeef] rounded-[8px] flex items-center justify-center overflow-hidden flex-shrink-0",
+        "bg-[#00aeef] rounded-[8px] flex items-center justify-center flex-shrink-0 select-none",
         className
       )}
       style={{ width: size, height: size }}
     >
-      <img
-        src={ASSETS.outMark}
-        alt="Out"
-        width={size * 0.45}
-        height={size * 0.26}
-        className="object-contain"
-        style={{ width: size * 0.45, height: "auto" }}
-      />
+      <span
+        className="text-white font-black leading-none"
+        style={{
+          fontFamily: "var(--font-mona-sans)",
+          fontSize: size * 0.34,
+          letterSpacing: "-0.03em",
+        }}
+      >
+        OUT
+      </span>
     </div>
   );
 }

@@ -59,3 +59,61 @@ body {
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+/* Blog post body copy */
+.prose-out p {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  color: #003a50;
+  opacity: 0.75;
+  margin-bottom: 1.4rem;
+}
+
+.prose-out h2 {
+  font-family: var(--font-heading);
+  font-size: 1.375rem;
+  font-weight: 400;
+  color: #003a50;
+  letter-spacing: -0.02em;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-out h3 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #003a50;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-out ul,
+.prose-out ol {
+  padding-left: 1.25rem;
+  margin-bottom: 1.4rem;
+}
+
+.prose-out li {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  color: #003a50;
+  opacity: 0.75;
+  margin-bottom: 0.4rem;
+}
+
+.prose-out ul li {
+  list-style-type: disc;
+}
+
+.prose-out ol li {
+  list-style-type: decimal;
+}
+
+.prose-out strong {
+  font-weight: 600;
+  opacity: 1;
+  color: #003a50;
+}
