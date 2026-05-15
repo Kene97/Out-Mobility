@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import { WaitlistProvider } from "@/context/WaitlistContext";
 import WaitlistModal from "@/components/ui/WaitlistModal";
+import EcoNav from "@/components/layout/EcoNav";
 
 // Mona Sans — the real brand display font (narrow weights used in the Figma)
 const monaSans = localFont({
@@ -39,19 +40,19 @@ const instrumentSans = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://woutside.com"),
   alternates: { canonical: "/" },
-  title: "Out Mobility — Your Brand in 6,000+ Moving Vehicles",
+  title: "Out Mobility — The New Mobility OS",
   description:
-    "Run verified in-car ads across 6,000+ ride-hail vehicles and reach 100,000+ daily passengers. Real-time impression tracking. Campaigns live in 3 minutes. No setup fees, no middleman.",
+    "Cheap rides. Max vibes. 100% EV. Drivers earn more. Everything Onchain. AI-matched shared rides, verified in-car advertising, and the $OUTSIDE token — powering the future of transportation.",
   keywords:
-    "in-car advertising, mobility advertising, verified impressions, Out Mobility, Out-door, ride-hail advertising, fleet advertising, programmatic OOH",
+    "Out Mobility, mobility OS, EV ride-hail, in-car advertising, $OUTSIDE token, RWA, DePIN, verified impressions, fleet advertising, Web3 mobility",
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "Out Mobility — Your Brand in 6,000+ Moving Vehicles",
+    title: "Out Mobility — The New Mobility OS",
     description:
-      "Verified in-car advertising infrastructure. 100,000+ daily passengers, real-time impression tracking, campaigns live in 3 minutes.",
+      "Cheap rides. Max vibes. 100% EV. AI-matched rides, verified in-car ads, and the $OUTSIDE token — powering the future of transportation.",
     type: "website",
     siteName: "Out Mobility",
     images: [
@@ -59,15 +60,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 3600,
         height: 1890,
-        alt: "Out Mobility — Verified In-Car Advertising Platform",
+        alt: "Out Mobility — The New Mobility OS",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Out Mobility — Your Brand in 6,000+ Moving Vehicles",
+    title: "Out Mobility — The New Mobility OS",
     description:
-      "Verified in-car advertising. 100,000+ daily passengers, real-time impression tracking, campaigns live in 3 minutes.",
+      "Cheap rides. Max vibes. 100% EV. AI-matched rides, verified in-car ads, and the $OUTSIDE token.",
     images: ["/og-image.png"],
   },
 };
@@ -79,14 +80,14 @@ const jsonLd = {
   url: "https://woutside.com",
   logo: "https://woutside.com/favicon.png",
   description:
-    "Out Mobility builds verified in-car advertising infrastructure — connecting brands to 100,000+ daily passengers across 6,000+ ride-hail and fleet vehicles.",
+    "Out Mobility is a mobility infrastructure company building the software layer that turns vehicles into verified, managed advertising and mobility infrastructure.",
   foundingDate: "2024",
   contactPoint: {
     "@type": "ContactPoint",
     email: "hello@woutside.com",
-    contactType: "sales",
+    contactType: "customer support",
   },
-  sameAs: [],
+  sameAs: ["https://x.com/OutMobility", "https://token.woutside.com"],
 };
 
 export default function RootLayout({
@@ -107,6 +108,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <WaitlistProvider>
+          <EcoNav />
           {children}
           <WaitlistModal />
         </WaitlistProvider>

@@ -1,11 +1,12 @@
 const COINS = [
-  { name: "Bitcoin",  symbol: "BTC",  price: "$77,960.00", change: "+4.1%",  up: true  },
-  { name: "Ethereum", symbol: "ETH",  price: "$2,448.97",  change: "+4.4%",  up: true  },
-  { name: "Tether",   symbol: "USDT", price: "$1.00",       change: "+0.0%",  up: true  },
-  { name: "BNB",      symbol: "BNB",  price: "$644.32",    change: "+2.8%",  up: true  },
-  { name: "Solana",   symbol: "SOL",  price: "$90.15",     change: "+3.8%",  up: true  },
-  { name: "XRP",      symbol: "XRP",  price: "$0.612",     change: "+1.2%",  up: true  },
-  { name: "USDC",     symbol: "USDC", price: "$1.00",       change: "+0.0%",  up: true  },
+  { name: "OUTSIDE",  symbol: "$OUTSIDE", price: "$0.62224",   change: "+83.09%", up: true, highlight: true },
+  { name: "Bitcoin",  symbol: "BTC",      price: "$77,960.00", change: "+4.1%",   up: true  },
+  { name: "Ethereum", symbol: "ETH",      price: "$2,448.97",  change: "+4.4%",   up: true  },
+  { name: "Tether",   symbol: "USDT",     price: "$1.00",      change: "+0.0%",   up: true  },
+  { name: "BNB",      symbol: "BNB",      price: "$644.32",    change: "+2.8%",   up: true  },
+  { name: "Solana",   symbol: "SOL",      price: "$90.15",     change: "+3.8%",   up: true  },
+  { name: "XRP",      symbol: "XRP",      price: "$0.612",     change: "+1.2%",   up: true  },
+  { name: "USDC",     symbol: "USDC",     price: "$1.00",      change: "+0.0%",   up: true  },
 ];
 
 const items = [...COINS, ...COINS]; // doubled for seamless loop
@@ -30,9 +31,9 @@ export default function TickerBar() {
         {items.map((coin, i) => (
           <div
             key={i}
-            className="flex items-center gap-1.5 mr-8 whitespace-nowrap"
+            className={`flex items-center gap-1.5 mr-8 whitespace-nowrap ${coin.highlight ? "px-2 py-0.5 bg-[#00aeef]/8 rounded-md" : ""}`}
           >
-            <span className="text-[12px] font-semibold text-[#003a50]">{coin.name}</span>
+            <span className={`text-[12px] font-semibold ${coin.highlight ? "text-[#00aeef]" : "text-[#003a50]"}`}>{coin.name}</span>
             <span className="text-[11px] text-gray-400">{coin.symbol}</span>
             <span className="text-[12px] font-medium text-[#003a50]">{coin.price}</span>
             <span

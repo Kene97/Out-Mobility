@@ -3,8 +3,6 @@
 import { useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { WaitlistProvider } from "@/context/WaitlistContext";
-import WaitlistModal from "@/components/ui/WaitlistModal";
 
 const inquiryTypes = [
   "I want to advertise",
@@ -37,7 +35,7 @@ export default function ContactPage() {
   }
 
   return (
-    <WaitlistProvider>
+      <>
       <Header />
       <main className="bg-white min-h-screen">
         <section className="px-4 py-16 md:px-8 md:py-24 xl:px-20">
@@ -176,7 +174,6 @@ export default function ContactPage() {
         </section>
       </main>
       <Footer />
-      <WaitlistModal />
-    </WaitlistProvider>
+      </>
   );
 }

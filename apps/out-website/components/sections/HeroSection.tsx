@@ -2,91 +2,47 @@
 
 import { motion } from "framer-motion";
 import CTAButton from "@/components/ui/CTAButton";
-import { ASSETS } from "@/lib/assets";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  show: (delay = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1], delay },
-  }),
-};
 
 export default function HeroSection() {
   return (
-    <section className="bg-white px-4 py-12 md:px-8 md:py-16 xl:px-20 xl:py-16 max-w-[1440px] mx-auto">
-      <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-10 lg:gap-16">
+    <section className="bg-white px-4 py-12 md:px-8 md:py-16 xl:px-20 xl:py-[72px]">
+      <div className="max-w-[1440px] mx-auto">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 lg:gap-16">
 
-        {/* ── Text column ── */}
-        <div className="flex flex-col gap-4 lg:w-[485px] lg:flex-shrink-0">
-
-          {/* Headline */}
-          <motion.div variants={fadeUp} initial="hidden" animate="show" custom={0}>
-            <h1 className="font-display font-black uppercase leading-none text-[#003a50]">
-              <span className="block text-[48px] md:text-[64px] lg:text-[72px] leading-[0.92]">
-                GET VISIBLE IN 6,000+ VEHICLES
-              </span>
-              <span className="block text-[56px] md:text-[80px] lg:text-[98px] leading-none mt-1">
-                IN{" "}
-                <span className="text-[#00aeef]">3 MINUTES</span>
-              </span>
+          {/* Left: big cyan headline */}
+          <motion.div
+            className="lg:w-[510px] lg:flex-shrink-0"
+            initial={{ opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <h1 className="font-display font-black uppercase text-[#00aeef] text-[44px] md:text-[64px] lg:text-[88px] leading-[0.92]">
+              POWERING THE FUTURE OF TRANSPORTATION
             </h1>
           </motion.div>
 
-          {/* Sub-headline + body */}
+          {/* Right: subhead + body + CTA */}
           <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            custom={0.1}
-            className="flex flex-col gap-1"
+            className="flex flex-col gap-4 lg:w-[600px]"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}
           >
-            <p className="font-heading text-[16px] md:text-[20px] font-semibold text-[#00aeef] leading-[1.5]">
-              Connect your ads to passengers in 3 minutes.
+            <h2 className="font-heading text-[#004762] text-[22px] md:text-[28px] leading-[1.3]">
+              The new Mobility OS.
+            </h2>
+            <p className="text-[15px] md:text-[18px] font-normal text-[#004762] leading-[1.6]">
+              Cheap rides. Max vibes. 100% EV. Drivers earn more. Everything Onchain.
+              Step out into comfort. AI-matched shared rides with people who actually
+              vibe with you. Book in seconds. Pay with crypto or fiat. We outside.
             </p>
-            <p className="text-[14px] md:text-[16px] font-normal text-[#003a50] leading-[1.6]">
-              Just plug-n-play, no middleman. Every impression proven and
-              verified in-app — not guessed.
-            </p>
-          </motion.div>
-
-          {/* CTA */}
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            custom={0.2}
-            className="flex flex-col gap-2"
-          >
-            <CTAButton fullWidth className="text-[16px] md:text-[20px] py-5 md:py-6">
-              LAUNCH YOUR FIRST CAMPAIGN
-            </CTAButton>
-            <p className="text-[12px] md:text-[16px] font-medium text-[#00aeef]">
-              No setup fees. Cancel anytime.
-            </p>
+            <div className="mt-2">
+              <CTAButton className="text-[16px] md:text-[20px] px-10 py-6">
+                LEARN MORE
+              </CTAButton>
+            </div>
           </motion.div>
         </div>
-
-        {/* ── Hero image ── */}
-        <motion.div
-          className="w-full lg:flex-1 lg:max-w-[652px] h-[271px] md:h-[380px] lg:h-[481px] rounded-2xl lg:rounded-[32px] overflow-hidden relative flex-shrink-0"
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.05 }}
-        >
-          <img
-            src={ASSETS.heroDesktop}
-            alt="In-car advertising tablet showing Out-door platform"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <img
-            src={ASSETS.heroOverlay}
-            alt=""
-            aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </motion.div>
       </div>
     </section>
   );

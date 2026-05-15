@@ -2,8 +2,9 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import TickerBar from "@/components/sections/TickerBar";
 import HeroSection from "@/components/sections/HeroSection";
-import ValuePropSection from "@/components/sections/ValuePropSection";
+import PartnersSection from "@/components/sections/PartnersSection";
 import MetricsSection from "@/components/sections/MetricsSection";
+import ValuePropSection from "@/components/sections/ValuePropSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 
 export default function Home() {
@@ -12,8 +13,9 @@ export default function Home() {
       <Header />
       <TickerBar />
       <HeroSection />
-      <ValuePropSection />
+      <PartnersSection />
       <MetricsSection />
+      <ValuePropSection />
       <HowItWorksSection />
       <Footer />
     </main>

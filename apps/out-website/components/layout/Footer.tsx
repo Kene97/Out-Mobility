@@ -91,19 +91,13 @@ export default function Footer() {
           </div>
 
           {/* Footer "OUTSIDE" wordmark banner */}
-          <div className="relative bg-[#003a50] rounded-2xl md:rounded-[20px] h-16 md:h-[134px] overflow-hidden flex items-center justify-center">
+          <div className="relative bg-black rounded-2xl md:rounded-[20px] h-16 md:h-[134px] overflow-hidden flex items-center justify-center">
             <div className="absolute inset-0 bg-black mix-blend-plus-lighter opacity-50 pointer-events-none" />
-            <span
-              className="relative z-10 text-white font-black uppercase pointer-events-none select-none"
-              style={{
-                fontFamily: "var(--font-mona-sans)",
-                fontSize: "clamp(2.5rem, 10vw, 8rem)",
-                letterSpacing: "-0.04em",
-                lineHeight: 1,
-              }}
-            >
-              OUTSIDE
-            </span>
+            <img
+              src="/images/footer-logo.png"
+              alt="Out Mobility"
+              className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
+            />
           </div>
 
           {/* Bottom row */}

@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import CTAButton from "@/components/ui/CTAButton";
-import { WaitlistProvider } from "@/context/WaitlistContext";
-import WaitlistModal from "@/components/ui/WaitlistModal";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
@@ -69,7 +67,7 @@ const faqs = [
 
 export default function AdvertisePage() {
   return (
-    <WaitlistProvider>
+      <>
       <Header />
       <main>
 
@@ -223,7 +221,6 @@ export default function AdvertisePage() {
 
       </main>
       <Footer />
-      <WaitlistModal />
-    </WaitlistProvider>
+      </>
   );
 }

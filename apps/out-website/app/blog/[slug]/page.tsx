@@ -4,8 +4,6 @@ import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CTAButton from "@/components/ui/CTAButton";
-import { WaitlistProvider } from "@/context/WaitlistContext";
-import WaitlistModal from "@/components/ui/WaitlistModal";
 import { getPostBySlug, getAllPosts, formatDate } from "@/lib/blog";
 
 interface Props {
@@ -61,7 +59,7 @@ export default async function BlogPostPage({ params }: Props) {
   };
 
   return (
-    <WaitlistProvider>
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -148,7 +146,6 @@ export default async function BlogPostPage({ params }: Props) {
 
       </main>
       <Footer />
-      <WaitlistModal />
-    </WaitlistProvider>
+      </>
   );
 }

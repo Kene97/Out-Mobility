@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import CTAButton from "@/components/ui/CTAButton";
-import { WaitlistProvider } from "@/context/WaitlistContext";
-import WaitlistModal from "@/components/ui/WaitlistModal";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
@@ -112,7 +110,7 @@ function StepGrid({ steps }: { steps: typeof advertiserSteps }) {
 
 export default function HowItWorksPage() {
   return (
-    <WaitlistProvider>
+      <>
       <Header />
       <main>
 
@@ -226,7 +224,6 @@ export default function HowItWorksPage() {
 
       </main>
       <Footer />
-      <WaitlistModal />
-    </WaitlistProvider>
+      </>
   );
 }
