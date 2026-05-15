@@ -10,8 +10,8 @@ const products = [
     tag: "ACTIVE",
     tagColor: "#00aeef",
     headline: "Verified In-Car Advertising",
-    desc: "Android tablets in ride-hail vehicles serve verified ads. Advertisers pay in $OUTSIDE. Drivers earn in $OUTSIDE. Every impression proven.",
-    role: "$OUTSIDE powers payments, rewards, and premium staking.",
+    desc: "Android tablets in ride-hail vehicles serve verified ads. Advertisers pay in Ecosystem Token. Drivers earn in Ecosystem Token. Every impression proven.",
+    role: "Ecosystem Token powers payments, rewards, and premium staking.",
     status: "Live — MVP focus",
   },
   {
@@ -20,8 +20,8 @@ const products = [
     tag: "UPCOMING",
     tagColor: "rgba(255,255,255,0.35)",
     headline: "Ride-Hailing & Subscriptions",
-    desc: "Riders earn $OUTSIDE cashback on completed trips. Drivers earn bonuses. Subscriptions payable in token.",
-    role: "$OUTSIDE is the loyalty and settlement layer for mobility.",
+    desc: "Riders earn Ecosystem Token cashback on completed trips. Drivers earn bonuses. Subscriptions payable in token.",
+    role: "Ecosystem Token is the loyalty and settlement layer for mobility.",
     status: "Coming soon",
   },
   {
@@ -30,8 +30,8 @@ const products = [
     tag: "UPCOMING",
     tagColor: "rgba(255,255,255,0.35)",
     headline: "Carbon Credits & Sustainability",
-    desc: "Every EV trip creates verified emission reductions. Out-leaf converts those into carbon credits denominated in $OUTSIDE.",
-    role: "$OUTSIDE is the settlement currency for every carbon credit.",
+    desc: "Every EV trip creates verified emission reductions. Out-leaf converts those into carbon credits denominated in Ecosystem Token.",
+    role: "Ecosystem Token is the settlement currency for every carbon credit.",
     status: "Coming soon",
   },
   {
@@ -40,8 +40,8 @@ const products = [
     tag: "UPCOMING",
     tagColor: "rgba(255,255,255,0.35)",
     headline: "EV Charging Infrastructure",
-    desc: "Fleet chargers deployed across operator hubs. Charging sessions settled in $OUTSIDE. Hosts earn for providing infrastructure.",
-    role: "$OUTSIDE settles every charging transaction.",
+    desc: "Fleet chargers deployed across operator hubs. Charging sessions settled in Ecosystem Token. Hosts earn for providing infrastructure.",
+    role: "Ecosystem Token settles every charging transaction.",
     status: "Coming soon",
   },
 ];
@@ -73,7 +73,7 @@ export default function EcosystemSection() {
             <span className="text-[#00aeef]">One token.</span>
           </h2>
           <p className="text-white/50 text-[15px] leading-[1.7] max-w-[540px]">
-            $OUTSIDE doesn't power one product. It powers the entire stack —
+            Ecosystem Token doesn't power one product. It powers the entire stack —
             from the screen in a vehicle to the carbon credit it creates.
           </p>
         </motion.div>
@@ -83,10 +83,11 @@ export default function EcosystemSection() {
           {products.map((p, i) => (
             <motion.div
               key={p.id}
-              initial={{ opacity: 0, y: 24 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative bg-[#0a1822] border border-white/6 rounded-[20px] p-7 flex flex-col gap-4 overflow-hidden hover:border-[#00aeef]/20 transition-all"
+              initial={{ opacity: 0, x: i % 2 === 0 ? -28 : 28, y: 20 }}
+              animate={inView ? { opacity: 1, x: 0, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.08 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ y: -4, transition: { duration: 0.22, ease: "easeOut" } }}
+              className="group relative bg-[#0a1822] border border-white/6 rounded-[20px] p-7 flex flex-col gap-4 overflow-hidden hover:border-[#00aeef]/20 transition-colors cursor-default"
             >
               {/* Hover glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#00aeef]/0 to-[#00aeef]/0 group-hover:from-[#00aeef]/5 group-hover:to-transparent transition-all pointer-events-none rounded-[20px]" />
@@ -136,7 +137,7 @@ export default function EcosystemSection() {
               <span className="text-[#00aeef]">RWA</span>{" "}infrastructure.
             </p>
             <p className="text-white/45 text-[14px] leading-[1.6] mt-2">
-              Physical vehicles. Real trips. Verified data. $OUTSIDE is the token
+              Physical vehicles. Real trips. Verified data. Ecosystem Token is the token
               that makes all of it economically connected — and tradeable.
             </p>
           </div>

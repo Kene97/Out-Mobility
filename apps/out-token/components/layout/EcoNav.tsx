@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -13,171 +13,154 @@ const navLinks = [
 ];
 
 export default function EcoNav() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <>
-      {/* ── Desktop nav (Figma design) ── */}
-      <div className="fixed top-0 left-0 right-0 z-50 hidden md:flex items-center justify-center pt-4 px-4">
+      {/* ── Desktop: bottom-docked pill ── */}
+      <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-40 hidden md:block">
         <motion.div
-          initial={{ opacity: 0, y: -12 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className="flex items-center gap-3 bg-[#004762] rounded-[16px] p-3"
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
+          className="flex items-center gap-2 bg-[#004762] rounded-[16px] p-2.5"
           style={{
-            boxShadow: scrolled
-              ? "0 8px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(0,174,239,0.15)"
-              : "0 4px 16px rgba(0,0,0,0.3)",
-            transition: "box-shadow 0.3s ease",
+            boxShadow: "0 8px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(0,174,239,0.12), 0 0 24px rgba(0,174,239,0.06)",
           }}
         >
-          {/* OUT logo square */}
+          {/* OUT logo */}
           <a
             href="https://out-mobility.vercel.app"
-            className="relative flex items-center justify-center w-[72px] h-[56px] bg-[#222] rounded-[8px] overflow-hidden flex-shrink-0"
+            className="flex items-center justify-center w-[52px] h-[40px] bg-[#00aeef] hover:bg-[#00c4ff] rounded-[10px] flex-shrink-0 transition-colors"
           >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-[48px] h-[48px] bg-[#00aeef] rounded-[7px] flex items-center justify-center">
-                <span
-                  className="text-white text-[15px] leading-none"
-                  style={{
-                    fontFamily: "var(--font-mona-sans), 'Arial Narrow', Arial, sans-serif",
-                    fontWeight: 900,
-                    letterSpacing: "0.04em",
-                  }}
-                >
-                  OUT
-                </span>
-              </div>
-            </div>
+            <span
+              className="text-white text-[12px] leading-none"
+              style={{ fontFamily: "var(--font-mona-sans)", fontWeight: 900, letterSpacing: "0.04em" }}
+            >
+              OUT
+            </span>
           </a>
 
-          {/* Ecosystem links group */}
-          <div className="flex items-center gap-2 bg-[#00364b] h-[56px] px-2 rounded-[8px]">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="px-4 py-3 rounded-[8px] border border-[#004762] text-white text-[16px] leading-none whitespace-nowrap hover:bg-[#004762] hover:border-[#00aeef]/30 transition-all"
-                style={{ fontFamily: "var(--font-cal-sans), system-ui, sans-serif" }}
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
+          <div className="w-px h-5 bg-white/10" />
 
-          {/* $OUTSIDE CTA — active state (we're on the token site) */}
-          <div className="flex items-center gap-2 bg-[#00364b] border border-[#004762] h-[56px] px-5 rounded-[8px] flex-shrink-0">
-            <span
-              className="text-[#00aeef] text-[18px] font-black tracking-tight"
-              style={{ fontFamily: "var(--font-mona-sans), 'Arial Narrow', Arial, sans-serif", fontWeight: 900 }}
+          {/* Ecosystem links */}
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="px-3 py-2 rounded-[8px] text-white/65 text-[13px] hover:text-white hover:bg-[#00364b] transition-all whitespace-nowrap leading-none"
+              style={{ fontFamily: "var(--font-cal-sans)" }}
             >
-              $OUTSIDE
+              {link.label}
+            </a>
+          ))}
+
+          <div className="w-px h-5 bg-white/10" />
+
+          {/* OUT TOKEN — active */}
+          <div className="flex items-center gap-1.5 bg-[#00aeef]/15 border border-[#00aeef]/25 px-3 py-2 rounded-[10px] flex-shrink-0">
+            <span
+              className="text-[#00aeef] text-[13px] leading-none"
+              style={{ fontFamily: "var(--font-mona-sans)", fontWeight: 900 }}
+            >
+              OUT TOKEN
             </span>
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="text-[#00aeef]">
-              <path d="M4.5 13.5L13.5 4.5M13.5 4.5H7.5M13.5 4.5V10.5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg width="11" height="11" viewBox="0 0 18 18" fill="none">
+              <path d="M4.5 13.5L13.5 4.5M13.5 4.5H7.5M13.5 4.5V10.5" stroke="#00aeef" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
         </motion.div>
       </div>
 
-      {/* ── Mobile nav ── */}
-      <div className="fixed top-0 left-0 right-0 z-50 md:hidden">
+      {/* ── Mobile: bottom bar ── */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden pb-safe">
         <motion.div
-          initial={{ opacity: 0, y: -12 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="flex items-center justify-between mx-3 mt-3 bg-[#004762] rounded-[14px] px-3 py-2.5"
-          style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.4)" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
+          className="mx-3 mb-3"
         >
-          {/* Logo */}
-          <a href="https://out-mobility.vercel.app" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-[#00aeef] rounded-[8px] flex items-center justify-center">
+          {/* Drawer */}
+          <AnimatePresence>
+            {menuOpen && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                className="overflow-hidden mb-1 bg-[#004762] rounded-[14px]"
+                style={{ boxShadow: "0 -4px 24px rgba(0,0,0,0.4)" }}
+              >
+                <div className="p-2 grid grid-cols-3 gap-1">
+                  {navLinks.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      onClick={() => setMenuOpen(false)}
+                      className="flex items-center justify-center px-2 py-3 rounded-[8px] text-white/65 text-[13px] hover:bg-[#00364b] hover:text-white transition-colors text-center"
+                      style={{ fontFamily: "var(--font-cal-sans)" }}
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+                <div className="px-2 pb-2">
+                  <a
+                    href="https://out-mobility.vercel.app"
+                    className="flex items-center justify-center gap-2 py-2.5 bg-white/5 rounded-[8px] text-white/50 text-[12px] hover:text-white transition-colors"
+                    style={{ fontFamily: "var(--font-instrument-sans)" }}
+                  >
+                    outmobility.com ↗
+                  </a>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Bottom pill */}
+          <div
+            className="flex items-center justify-between bg-[#004762] rounded-[14px] px-3 py-2.5"
+            style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,174,239,0.1)" }}
+          >
+            <a
+              href="https://out-mobility.vercel.app"
+              className="flex items-center justify-center w-9 h-9 bg-[#00aeef] rounded-[8px] flex-shrink-0"
+            >
               <span
-                className="text-white text-[12px] leading-none"
+                className="text-white text-[10px] leading-none"
                 style={{ fontFamily: "var(--font-mona-sans)", fontWeight: 900 }}
               >
                 OUT
               </span>
-            </div>
-          </a>
+            </a>
 
-          {/* Token badge */}
-          <span
-            className="text-[#00aeef] text-[15px] font-black tracking-tight"
-            style={{ fontFamily: "var(--font-mona-sans)", fontWeight: 900 }}
-          >
-            $OUTSIDE
-          </span>
-
-          {/* Hamburger */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="w-10 h-10 flex flex-col items-center justify-center gap-1.5"
-            aria-label="Menu"
-          >
-            <motion.span
-              animate={menuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-              className="block w-5 h-[1.5px] bg-white rounded-full"
-            />
-            <motion.span
-              animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
-              className="block w-5 h-[1.5px] bg-white rounded-full"
-            />
-            <motion.span
-              animate={menuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-              className="block w-5 h-[1.5px] bg-white rounded-full"
-            />
-          </button>
-        </motion.div>
-
-        {/* Mobile drawer */}
-        <AnimatePresence>
-          {menuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="overflow-hidden mx-3 mt-1 bg-[#004762] rounded-[14px]"
-              style={{ boxShadow: "0 8px 24px rgba(0,0,0,0.4)" }}
+            <span
+              className="text-[#00aeef] text-[13px]"
+              style={{ fontFamily: "var(--font-mona-sans)", fontWeight: 900 }}
             >
-              <div className="p-3 flex flex-col gap-1">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    onClick={() => setMenuOpen(false)}
-                    className="px-4 py-3 rounded-[8px] text-white text-[16px] hover:bg-[#00364b] transition-colors"
-                    style={{ fontFamily: "var(--font-cal-sans)" }}
-                  >
-                    {link.label}
-                  </a>
-                ))}
-                <div className="mt-1 pt-2 border-t border-white/10">
-                  <a
-                    href="https://x.com/OutMobility"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-3 rounded-[8px] bg-[#00aeef]/10 text-[#00aeef] hover:bg-[#00aeef]/20 transition-colors"
-                  >
-                    <span className="font-semibold text-[15px]">Follow @OutMobility</span>
-                    <svg width="14" height="14" viewBox="0 0 18 18" fill="none">
-                      <path d="M4.5 13.5L13.5 4.5M13.5 4.5H7.5M13.5 4.5V10.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              OUT TOKEN
+            </span>
+
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="w-9 h-9 flex flex-col items-center justify-center gap-[5px]"
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+            >
+              <motion.span
+                animate={menuOpen ? { rotate: 45, y: 5.5 } : { rotate: 0, y: 0 }}
+                className="block w-[18px] h-[1.5px] bg-white/70 rounded-full origin-center"
+              />
+              <motion.span
+                animate={menuOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
+                className="block w-[18px] h-[1.5px] bg-white/70 rounded-full"
+              />
+              <motion.span
+                animate={menuOpen ? { rotate: -45, y: -5.5 } : { rotate: 0, y: 0 }}
+                className="block w-[18px] h-[1.5px] bg-white/70 rounded-full origin-center"
+              />
+            </button>
+          </div>
+        </motion.div>
       </div>
     </>
   );

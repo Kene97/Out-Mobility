@@ -51,7 +51,7 @@ function DonutChart() {
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <span className="text-white text-[11px] font-medium tracking-wide">TOTAL SUPPLY</span>
         <span className="text-[#00aeef] text-[13px] font-bold mt-0.5">1,000,000,000</span>
-        <span className="text-white/40 text-[10px]">$OUTSIDE</span>
+        <span className="text-white/40 text-[10px]">Ecosystem Token</span>
       </div>
     </div>
   );

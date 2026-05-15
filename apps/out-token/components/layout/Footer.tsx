@@ -6,7 +6,7 @@ const ecosystemLinks = [
 ];
 
 const tokenLinks = [
-  { label: "Why $OUTSIDE", href: "#why" },
+  { label: "Why Ecosystem Token", href: "#why" },
   { label: "Token Utility",  href: "#utility" },
   { label: "Tokenomics",     href: "#tokenomics" },
   { label: "Roadmap",        href: "#roadmap" },
@@ -38,7 +38,7 @@ export default function Footer() {
               </div>
               <div>
                 <p className="text-white text-[13px] font-bold leading-none">Out Mobility</p>
-                <p className="text-white/35 text-[11px] mt-0.5">$OUTSIDE Token</p>
+                <p className="text-white/35 text-[11px] mt-0.5">Ecosystem Token Token</p>
               </div>
             </div>
             <p className="text-white/35 text-[13px] leading-[1.6]">
@@ -59,7 +59,7 @@ export default function Footer() {
 
           {/* Token links */}
           <div className="flex flex-col gap-3">
-            <p className="text-white/30 text-[11px] tracking-[0.14em] uppercase font-semibold mb-1">$OUTSIDE</p>
+            <p className="text-white/30 text-[11px] tracking-[0.14em] uppercase font-semibold mb-1">Ecosystem Token</p>
             {tokenLinks.map((l) => (
               <a key={l.label} href={l.href} className="text-white/55 text-[13px] hover:text-white transition-colors">
                 {l.label}
@@ -103,7 +103,7 @@ export default function Footer() {
           <p className="text-white/25 text-[11px] leading-[1.7] max-w-[900px]">
             <strong className="text-white/40">Disclaimer:</strong>{" "}
             Nothing on this website constitutes financial advice, investment advice, or a solicitation to buy or sell
-            any asset. $OUTSIDE has not launched and is not available for purchase or trading. All tokenomics figures
+            any asset. Ecosystem Token has not launched and is not available for purchase or trading. All tokenomics figures
             are proposed and subject to change before the Token Generation Event (TGE). Participation in any future
             token event carries significant risk including total loss. Do not participate with funds you cannot afford
             to lose. Out Mobility makes no guarantee of returns or price performance. This site is for informational
@@ -114,7 +114,7 @@ export default function Footer() {
               © 2026 Out Inc. All rights reserved.
             </p>
             <p className="text-white/20 text-[11px]">
-              Built on Out Mobility infrastructure. Powered by $OUTSIDE.
+              Built on Out Mobility infrastructure. Powered by Ecosystem Token.
             </p>
           </div>
         </div>

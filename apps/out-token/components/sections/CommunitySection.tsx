@@ -25,7 +25,7 @@ export default function CommunitySection() {
               className="text-[#00aeef] text-[13px] leading-none font-black tracking-wider"
               style={{ fontFamily: "var(--font-mona-sans)", fontWeight: 900 }}
             >
-              $OUT
+              TOKEN
             </span>
           </div>
 
@@ -42,7 +42,7 @@ export default function CommunitySection() {
               The journey starts{" "}<span className="text-[#00aeef]">now.</span>
             </h2>
             <p className="text-white/55 text-[16px] leading-[1.7] max-w-[480px] mx-auto">
-              $OUTSIDE hasn't launched yet. But the community building now will be
+              Ecosystem Token hasn't launched yet. But the community building now will be
               first in line when it does. Follow along on X. Watch the roadmap unfold.
               Be here before it's obvious.
             </p>
@@ -65,6 +65,19 @@ export default function CommunitySection() {
                 <path d="M4.5 13.5L13.5 4.5M13.5 4.5H7.5M13.5 4.5V10.5" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </motion.a>
+            <motion.a
+              href="/whitepaper"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 420, damping: 26 }}
+              className="flex items-center gap-2.5 border border-white/15 hover:border-[#00aeef]/45 text-white/60 hover:text-white px-8 py-4 rounded-[14px] transition-all"
+              style={{ fontFamily: "var(--font-instrument-sans)", fontWeight: 500, fontSize: "14px" }}
+            >
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3v13M12 16l-4-4M12 16l4-4M4 20h16" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              Read Ecosystem Thesis
+            </motion.a>
           </div>
 
           {/* What we post */}
@@ -76,11 +89,18 @@ export default function CommunitySection() {
               { emoji: "🗳️", label: "Community announcements" },
               { emoji: "📅", label: "TGE date — first" },
               { emoji: "📊", label: "Real data. No noise." },
-            ].map((item) => (
-              <div key={item.label} className="bg-white/4 rounded-[10px] px-4 py-3 flex items-center gap-2.5">
+            ].map((item, i) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 14, scale: 0.95 }}
+                animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
+                transition={{ duration: 0.4, delay: 0.3 + i * 0.07, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={{ scale: 1.03, backgroundColor: "rgba(0,174,239,0.08)", transition: { duration: 0.15 } }}
+                className="bg-white/4 rounded-[10px] px-4 py-3 flex items-center gap-2.5 cursor-default"
+              >
                 <span className="text-[16px]">{item.emoji}</span>
                 <span className="text-white/55 text-[12px] font-medium leading-tight">{item.label}</span>
-              </div>
+              </motion.div>
             ))}
           </div>
 

@@ -7,17 +7,17 @@ const points = [
   {
     icon: "⬡",
     title: "Fragmented networks need a shared currency.",
-    body: "Four products. Thousands of vehicles. Millions of transactions. Without a shared token, value created in one part of the ecosystem cannot flow to another. $OUTSIDE fixes that.",
+    body: "Four products. Thousands of vehicles. Millions of transactions. Without a shared token, value created in one part of the ecosystem cannot flow to another. Ecosystem Token fixes that.",
   },
   {
     icon: "◈",
     title: "Contributors deserve a stake in what they build.",
-    body: "Drivers, operators, and community members make the network work. $OUTSIDE gives them a way to earn, hold, and participate in the value they help create — not just a cash payout.",
+    body: "Drivers, operators, and community members make the network work. Ecosystem Token gives them a way to earn, hold, and participate in the value they help create — not just a cash payout.",
   },
   {
     icon: "◎",
     title: "Real infrastructure should have real token utility.",
-    body: "This is not a speculation token. $OUTSIDE is the economic layer of a physical network — vehicles, screens, chargers, and verified data. The token earns its value by doing real work.",
+    body: "This is not a speculation token. Ecosystem Token is the economic layer of a physical network — vehicles, screens, chargers, and verified data. The token earns its value by doing real work.",
   },
 ];
 
@@ -52,7 +52,7 @@ export default function WhySection() {
                 {" "}<span className="text-[#00aeef]">an engine.</span>
               </h2>
               <p className="text-white/55 text-[15px] leading-[1.7]">
-                Out Mobility is not one product. It is an ecosystem. $OUTSIDE is the
+                Out Mobility is not one product. It is an ecosystem. Ecosystem Token is the
                 economic thread that runs through all of it — making the whole greater
                 than the sum of its parts.
               </p>
@@ -64,10 +64,11 @@ export default function WhySection() {
             {points.map((pt, i) => (
               <motion.div
                 key={pt.title}
-                initial={{ opacity: 0, x: 20 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.1 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                className="bg-[#0a1822] border border-white/6 rounded-[16px] p-6 md:p-8 flex gap-5 hover:border-[#00aeef]/20 transition-colors"
+                initial={{ opacity: 0, x: i % 2 === 0 ? 32 : -32, y: 16, filter: "blur(4px)" }}
+                animate={inView ? { opacity: 1, x: 0, y: 0, filter: "blur(0px)" } : {}}
+                transition={{ duration: 0.6, delay: 0.12 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={{ y: -3, borderColor: "rgba(0,174,239,0.25)", transition: { duration: 0.2 } }}
+                className="bg-[#0a1822] border border-white/6 rounded-[16px] p-6 md:p-8 flex gap-5 transition-colors cursor-default"
               >
                 <span className="text-[#00aeef] text-[22px] flex-shrink-0 mt-0.5">{pt.icon}</span>
                 <div className="flex flex-col gap-2">

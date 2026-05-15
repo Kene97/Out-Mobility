@@ -1,4 +1,4 @@
-import EcoNav from "@/components/layout/EcoNav";
+import TopBar from "@/components/layout/TopBar";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import TickerSection from "@/components/sections/TickerSection";
@@ -14,7 +14,7 @@ import FAQSection from "@/components/sections/FAQSection";
 export default function Home() {
   return (
     <main className="overflow-x-hidden">
-      <EcoNav />
+      <TopBar />
       <HeroSection />
       <TickerSection />
       <WhySection />

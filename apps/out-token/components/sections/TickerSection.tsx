@@ -1,6 +1,6 @@
 export default function TickerSection() {
   const items = [
-    "$OUTSIDE",
+    "ECOSYSTEM TOKEN",
     "DEPIN",
     "RWA",
     "UTILITY TOKEN",

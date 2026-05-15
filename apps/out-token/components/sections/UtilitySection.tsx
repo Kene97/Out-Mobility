@@ -8,7 +8,7 @@ const utilities = [
     tag: "PAYMENTS",
     icon: "◈",
     title: "Advertising Payments",
-    body: "Brands and advertisers pay for verified in-car impressions using $OUTSIDE. Recurring. Real. Demand-driven.",
+    body: "Brands and advertisers pay for verified in-car impressions using Ecosystem Token. Recurring. Real. Demand-driven.",
     product: "Out-door",
     productColor: "#00aeef",
   },
@@ -16,7 +16,7 @@ const utilities = [
     tag: "REWARDS",
     icon: "⬡",
     title: "Driver & Operator Rewards",
-    body: "Every driver who runs ads, every operator who grows the fleet — they earn $OUTSIDE for their contribution to the network.",
+    body: "Every driver who runs ads, every operator who grows the fleet — they earn Ecosystem Token for their contribution to the network.",
     product: "All Products",
     productColor: "#00aeef",
   },
@@ -24,7 +24,7 @@ const utilities = [
     tag: "STAKING",
     icon: "◎",
     title: "Premium Access Staking",
-    body: "Advertisers who stake $OUTSIDE unlock priority placement, advanced targeting, and early inventory access.",
+    body: "Advertisers who stake Ecosystem Token unlock priority placement, advanced targeting, and early inventory access.",
     product: "Out-door",
     productColor: "#00aeef",
   },
@@ -32,7 +32,7 @@ const utilities = [
     tag: "SETTLEMENT",
     icon: "⊕",
     title: "Cross-Product Settlement",
-    body: "Rides, carbon credits, EV charging — every transaction across the ecosystem settles through $OUTSIDE.",
+    body: "Rides, carbon credits, EV charging — every transaction across the ecosystem settles through Ecosystem Token.",
     product: "Out-side · Out-leaf · Out-charge",
     productColor: "#00aeef",
   },
@@ -48,7 +48,7 @@ const utilities = [
     tag: "DATA",
     icon: "⊞",
     title: "Data Marketplace Access",
-    body: "Future: verified mobility data — routes, audiences, patterns — accessible to researchers and planners using $OUTSIDE.",
+    body: "Future: verified mobility data — routes, audiences, patterns — accessible to researchers and planners using Ecosystem Token.",
     product: "Coming soon",
     productColor: "rgba(255,255,255,0.3)",
   },
@@ -81,7 +81,7 @@ export default function UtilitySection() {
             className="text-[36px] md:text-[52px] text-white leading-[1.05] tracking-tight max-w-[640px]"
             style={{ fontFamily: "var(--font-mona-sans)", fontWeight: 900 }}
           >
-            What{" "}<span className="text-[#00aeef]">$OUTSIDE</span>{" "}actually does.
+            What{" "}<span className="text-[#00aeef]">Ecosystem Token</span>{" "}actually does.
           </h2>
           <p className="text-white/50 text-[15px] leading-[1.7] max-w-[520px]">
             A token without utility is just a number. Every function below is tied to
