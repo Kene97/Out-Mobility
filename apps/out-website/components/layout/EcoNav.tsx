@@ -1,19 +1,21 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { label: "Ride",      href: "#ride"    },
   { label: "Drive",     href: "#drive"   },
-  { label: "Outdoor",   href: "#outdoor", active: true },
+  { label: "Outdoor",   href: "/outdoor" },
   { label: "Charge EV", href: "#charge"  },
   { label: "CO₂",       href: "#co2"     },
-  { label: "About",     href: "#about"   },
+  { label: "About",     href: "/about"   },
 ];
 
 export default function EcoNav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <>
@@ -49,7 +51,7 @@ export default function EcoNav() {
               key={link.label}
               href={link.href}
               className={`px-3 py-2 rounded-[8px] text-[13px] whitespace-nowrap leading-none transition-all ${
-                link.active
+                pathname === link.href
                   ? "bg-[#00aeef]/15 border border-[#00aeef]/25 text-[#00aeef]"
                   : "text-white/65 hover:text-white hover:bg-white/8"
               }`}
@@ -106,7 +108,7 @@ export default function EcoNav() {
                       href={link.href}
                       onClick={() => setMenuOpen(false)}
                       className={`flex items-center justify-center px-2 py-3 rounded-[8px] text-[13px] text-center transition-colors ${
-                        link.active
+                        pathname === link.href
                           ? "bg-[#00aeef]/15 text-[#00aeef]"
                           : "text-white/65 hover:bg-white/8 hover:text-white"
                       }`}
@@ -163,7 +165,9 @@ export default function EcoNav() {
               <span className="text-white text-[10px] leading-none" style={{ fontFamily: "var(--font-mona-sans)", fontWeight: 900 }}>OUT</span>
             </a>
 
-            <span className="text-white/60 text-[12px]" style={{ fontFamily: "var(--font-cal-sans)" }}>Outdoor</span>
+            <span className="text-white/60 text-[12px]" style={{ fontFamily: "var(--font-cal-sans)" }}>
+              {navLinks.find((l) => l.href === pathname)?.label ?? "Menu"}
+            </span>
 
             <button
               onClick={() => setMenuOpen(!menuOpen)}

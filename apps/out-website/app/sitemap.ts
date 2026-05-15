@@ -6,10 +6,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: base,                        changeFrequency: "weekly",  priority: 1.0 },
-    { url: `${base}/advertise`,         changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/fleet`,             changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/outdoor`,           changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/about`,             changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/advertise`,         changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/fleet`,             changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/pricing`,           changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/how-it-works`,      changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/how-it-works`,      changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/blog`,              changeFrequency: "weekly",  priority: 0.8 },
     { url: `${base}/contact`,           changeFrequency: "yearly",  priority: 0.6 },
   ];
