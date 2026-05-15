@@ -23,9 +23,9 @@ export default function MetricsSection() {
           <div className="flex flex-col gap-6 lg:w-[616px] lg:flex-shrink-0">
             <motion.div
               className="flex flex-col gap-2"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             >
               <h2 className="font-heading text-[24px] lg:text-[32px] text-[#004762] tracking-[-0.02em] leading-[1.35]">
                 Real utilities begin with{" "}

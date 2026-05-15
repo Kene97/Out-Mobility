@@ -2,7 +2,6 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import Link from "next/link";
 
 const features = [
   {
@@ -88,15 +87,18 @@ export default function HowItWorksSection() {
                 </div>
               </div>
 
-              <Link
+              <motion.a
                 href="https://token.woutside.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative inline-flex items-center justify-center bg-[#00aeef] text-white font-display font-black uppercase rounded-2xl px-10 py-6 text-[20px] hover:bg-[#00c4ff] transition-colors overflow-hidden"
+                className="relative inline-flex items-center justify-center bg-[#00aeef] text-white font-display font-black uppercase rounded-[16px] px-10 py-5 text-[18px] hover:bg-[#00c4ff] transition-colors overflow-hidden"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ type: "spring", stiffness: 420, damping: 26 }}
               >
                 <GridOverlay />
                 PROJECT WHITEPAPER
-              </Link>
+              </motion.a>
             </div>
           </motion.div>
 
@@ -106,7 +108,7 @@ export default function HowItWorksSection() {
             {/* Header row: tag + token price */}
             <motion.div
               className="flex flex-col sm:flex-row gap-3"
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
             >
@@ -178,24 +180,27 @@ export default function HowItWorksSection() {
             {/* CTA card */}
             <motion.div
               className="bg-white rounded-2xl lg:rounded-3xl px-6 py-5 lg:px-10 lg:py-6 flex items-center justify-between gap-4"
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.46 }}
             >
               <p className="font-heading text-[#004762] text-[18px] lg:text-[24px] leading-[1.33]">
                 Visit the crypto project website to learn more
               </p>
-              <Link
+              <motion.a
                 href="https://token.woutside.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#00364b] border border-[#004762] text-white font-display font-black uppercase rounded-lg px-5 py-3 text-[14px] flex items-center gap-2 flex-shrink-0 hover:bg-[#004762] transition-colors"
+                className="bg-[#00364b] border border-[#004762] text-white font-display font-black uppercase rounded-[16px] px-6 py-5 text-[14px] flex items-center gap-2 flex-shrink-0 hover:bg-[#004762] transition-colors"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ type: "spring", stiffness: 420, damping: 26 }}
               >
                 <img src="/images/outside-ticker.png" alt="$OUTSIDE" className="h-5 object-contain" />
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M7 17L17 7M17 7H7M17 7v10" />
                 </svg>
-              </Link>
+              </motion.a>
             </motion.div>
           </div>
         </div>

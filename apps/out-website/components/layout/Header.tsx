@@ -3,16 +3,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import OutLogo from "@/components/ui/OutLogo";
-
-const navLinks = [
-  { label: "Advertise",    href: "/advertise"    },
-  { label: "Fleet",        href: "/fleet"        },
-  { label: "How it works", href: "/how-it-works" },
-  { label: "Pricing",      href: "/pricing"      },
-  { label: "Blog",         href: "/blog"         },
-  { label: "Contact",      href: "/contact"      },
-];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,8 +21,12 @@ export default function Header() {
       }`}
     >
       <div className="flex items-center justify-between px-4 md:px-8 xl:px-20 max-w-[1440px] mx-auto h-[72px]">
-        <a href="/" className="flex items-center">
-          <OutLogo size={44} />
+        <a href="/outdoor" className="flex items-center">
+          <img
+            src="/logo-blue.png"
+            alt="Out Mobility"
+            className="h-10 w-auto object-contain"
+          />
         </a>
 
         {/* Desktop CTAs */}
@@ -83,24 +77,9 @@ export default function Header() {
             transition={{ duration: 0.22, ease: "easeInOut" }}
             className="md:hidden overflow-hidden border-t border-gray-100 bg-white"
           >
-            <nav className="px-4 pt-3 pb-6 flex flex-col gap-1">
+            <nav className="px-4 pt-3 pb-6 flex flex-col gap-2">
 
-              {/* Section nav links */}
-              <div className="grid grid-cols-3 gap-1 mb-2">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    onClick={() => setMenuOpen(false)}
-                    className="flex items-center justify-center py-3 px-2 text-[13px] font-medium text-[#003a50]/70 rounded-lg hover:bg-[#f6fcff] hover:text-[#00aeef] transition-colors text-center"
-                    style={{ fontFamily: "var(--font-cal-sans)" }}
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
-
-              <div className="border-t border-gray-100 pt-3 flex flex-col gap-2">
+              <div className="flex flex-col gap-2">
                 {/* OUT TOKEN */}
                 <a
                   href="https://token.woutside.com"

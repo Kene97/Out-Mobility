@@ -37,9 +37,7 @@ export default function HeroSection() {
               vibe with you. Book in seconds. Pay with crypto or fiat. We outside.
             </p>
             <div className="mt-2">
-              <CTAButton className="text-[16px] md:text-[20px] px-10 py-6">
-                LEARN MORE
-              </CTAButton>
+              <CTAButton>LEARN MORE</CTAButton>
             </div>
           </motion.div>
         </div>

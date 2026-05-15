@@ -47,9 +47,7 @@ function OutdoorHero() {
             </motion.div>
 
             <motion.div variants={fadeUp} initial="hidden" animate="show" custom={0.2} className="flex flex-col gap-2">
-              <CTAButton fullWidth className="text-[16px] md:text-[20px] py-5 md:py-6">
-                LAUNCH YOUR FIRST CAMPAIGN
-              </CTAButton>
+              <CTAButton>LAUNCH YOUR FIRST CAMPAIGN</CTAButton>
               <p className="text-[12px] md:text-[16px] font-medium text-[#00aeef]">
                 No setup fees. Cancel anytime.
               </p>
@@ -290,17 +288,15 @@ function OutdoorHowItWorks() {
 
             <motion.div
               className="bg-white rounded-xl lg:rounded-3xl p-4 lg:p-8"
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.42 }}
+              transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.42 }}
             >
               <div className="flex items-center justify-between gap-4">
                 <p className="font-heading text-[18px] lg:text-[24px] text-[#003a50] leading-[1.33]">
                   Launch a campaign in 3 minutes
                 </p>
-                <CTAButton size="sm" className="flex-shrink-0 text-[14px] lg:text-[20px] px-5 lg:px-12 py-4 lg:py-6">
-                  GET STARTED
-                </CTAButton>
+                <CTAButton className="flex-shrink-0">GET STARTED</CTAButton>
               </div>
             </motion.div>
           </div>
