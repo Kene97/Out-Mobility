@@ -5,9 +5,17 @@ import { render } from "@react-email/components";
 import WaitlistConfirmation from "@/emails/WaitlistConfirmation";
 
 export async function POST(req: NextRequest) {
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
+    console.error("waitlist: missing Supabase env vars");
+    return NextResponse.json(
+      { error: "Service temporarily unavailable. Please try again later." },
+      { status: 503 }
+    );
+  }
+
   const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.SUPABASE_SERVICE_ROLE_KEY
   );
 
   try {
@@ -45,7 +53,7 @@ export async function POST(req: NextRequest) {
           { status: 409 }
         );
       }
-      console.error("Supabase insert error:", dbError);
+      console.error("waitlist: Supabase insert error", { code: dbError.code, message: dbError.message, details: dbError.details });
       return NextResponse.json(
         { error: "Something went wrong. Please try again." },
         { status: 500 }
@@ -80,7 +88,7 @@ export async function POST(req: NextRequest) {
         ].join("\n");
 
         await resend.emails.send({
-          from: "Didi at Out Mobility <hello@app.woutside.com>",
+          from: "Didi at Out Mobility <hello@woutside.com>",
           to: [email.trim().toLowerCase()],
           replyTo: "hello@woutside.com",
           subject: `Got your details, ${name} — you're in.`,
